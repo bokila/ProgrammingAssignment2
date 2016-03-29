@@ -23,10 +23,13 @@ cacheSolve <- function(x, ...) {
        inv <- x$getinvmatrix()
        
        if(!is.null(inv)) {
-               message("fetching cache")
-               return(inv)
-               
-       }
+                message("fetching cache")
+                return(inv)
+       }else    {
+                message("no cache")
+               }
+       
+       
        data <- x$get()
        inv <- solve(data, ...)
        
